@@ -1,0 +1,64 @@
+  //  map-get($h-font-size, h4); //
+// === Font === //
+$font-body: "Heebo","Roboto","Open Sans", sans-serif;
+$font-header: "Roboto","Open Sans", sans-serif;
+
+// === Font Weight === //
+$font-weight: (
+  fade:300,
+  normal: 400,
+  medium: 500,
+  bold: 700,
+);
+
+// == Breakpoints === //
+$breakpoints: (
+  small: 480px,
+  medium: 768px,
+  wide: 960px,
+  large: 1024px,
+  largest: 1280px,
+);
+
+// === Colors === //
+$colors: (
+  background1: #ffff,
+  background2: #f2f1f2,
+  background-black:#131418,
+  tab-background:#1f2125,
+  highlight-background:#facf6d,
+  txt-black:black,
+  txt-white:white,
+  blue:#2f4beb,
+
+);
+
+// === z-index === //
+$zindexs: (
+  dropdown: 1000,
+  sticky: 1020,
+  fixed: 1030,
+  modal-backdrop: 1040,
+  modal: 1050,
+  popover: 1060,
+  tooltip: 1070,
+);
+
+// === Typography === //
+$font-size-base: 18px !default; // 14px
+$font-size-lg: $font-size-base * 1.25 !default;
+$font-size-sm: $font-size-base * 0.875 !default;
+
+$h-font-size: (
+  h1: 72px,
+  h2: $font-size-base * 4,
+  h3: $font-size-base * 2.5,
+  h4: $font-size-base * 1.5,
+  h5: $font-size-base 
+);
+
+$inline: (
+  tiny:16px,
+  small: 20px,
+  medium : 40px
+);

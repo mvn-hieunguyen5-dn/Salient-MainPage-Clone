@@ -1,0 +1,21 @@
+%clr {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+@for $i from 1 through 6 {
+  .w-#{$i + "-7"} {
+    width: #{100/7 * $i + "%"};
+  }
+}
+
+article {
+  margin-block: 60px;
+  .block {
+    margin-block: 30px;
+  }
+}
+

@@ -1,0 +1,41 @@
+.TittleModule {
+  position: sticky;
+  top: 17%;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  margin-bottom: 80px;
+  // height: 100px;
+}
+.fillterList {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  transition: all 0.2s ease-in-out;
+}
+@media only screen and (max-width: 1023px) {
+  .TittleModule {
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+  }
+  .header {
+    border: 2px white solid;
+    padding: 10px 20px;
+    text-align: center;
+
+    border-radius: 20px;
+    &::before {
+      content: "+";
+      padding-bottom: 10px;
+    }
+  }
+  .fillterList {
+    flex-direction: row;
+    display: none;
+  }
+
+  .opened {
+    display: flex;
+  }
+}

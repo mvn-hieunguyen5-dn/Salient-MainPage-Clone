@@ -1,0 +1,85 @@
+.footer {
+  height: fit-content;
+  color: rgb(255, 255, 255);
+  // height: 100vh - 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-items: stretch;
+
+  background: linear-gradient(
+      #000 0,
+      transparent 20%,
+      transparent calc(100% - 20%),
+      #000 100%
+    ),
+    url("../../../image/slider-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  .basic-underline {
+    position: relative;
+    // text-overflow: clip;
+  }
+  h1 {
+    overflow-wrap: normal;
+    word-break: normal;
+    text-align: center;
+    padding-inline: 20vw;
+    padding-block: 20%;
+    height: fit-content;
+    display: block;
+    font-size: 5vw;
+    * {
+      font-size: 5vw;
+    }
+  }
+  .hightlight-header {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    border: 0px none rgb(0, 0, 0);
+    line-height: inherit;
+    position: relative;
+    display: inline-block;
+
+    padding: 0 3px;
+    z-index: 10;
+    .basic-underline {
+      z-index: 20;
+      position: absolute;
+      width: 100%;
+      bottom: 0%;
+      left: 0;
+      z-index: -1;
+      box-sizing: border-box;
+      line-height: inherit;
+    }
+  }
+  &-bottom {
+    font-weight: map-get($font-weight, fade);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+    border-top: 1px rgba(255,255,255,.2) solid;
+    padding-inline: 5%;
+    &-right {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+  }
+}
+@media only screen and (max-width: map-get($breakpoints, large)) {
+  .footer {
+    h1 {
+      padding-inline: 5vw;
+
+      width: fit-content;
+      font-size: 7vw;
+      * {
+        font-size: 7vw;
+      }
+    }
+  }
+}

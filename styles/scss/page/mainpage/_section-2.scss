@@ -1,0 +1,39 @@
+//Section 2 - sologan 
+//ENCHANT YOUR AUDIANCE
+.section-sologan{
+  padding-block: 5vw;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding-block: 0px;
+    padding-inline: 18%;
+    justify-items: stretch;
+    // color: ;
+    .line {
+      text-align: start;
+      // font: map-get($map: , $key: );
+      h1 {
+        font-size: 10vw;
+      }
+      .nectar-lottie{
+        height: 10vw;
+
+      }
+      font-weight: map-get($font-weight, medium );
+      position: relative;
+      height: fit-content;
+      display: flex;
+      
+      // line-height: 130px;
+    }
+    .line:nth-child(2) {
+      align-items: flex-end;
+      // justify-items: end;
+      justify-content: flex-end;
+    }
+    .line:nth-child(3) {
+      justify-content: center;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+@keyframes letter_animation {
+  0% {
+    opacity: 0;
+    transform: translateY(115%);
+  }
+
+  30% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+    transform: translateY(-25%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+%button {
+  padding-top: 0.8em;
+  padding-right: 2em;
+  padding-bottom: 0.8em;
+  padding-left: 2em;
+  border-radius: 100px;
+  border: none;
+  max-width: fit-content;
+  // font-size: 2vw;
+
+  &:hover {
+    // display: inline-block;
+    .char {
+      animation: letter_animation 0.5s cubic-bezier(0.46, 0.4, 0.56, 0.87)
+        forwards;
+      transform: translateY(110%);
+      display: inline-block;
+    }
+  }
+  span {
+    min-width: 3px;
+    // letter-spacing:0.1em;
+  }
+}
+
+.black-button {
+  @extend %button;
+  background-color: map-get($colors, background-black);
+  color: map-get($colors, txt-white);
+}
+.outline-button {
+  @extend %button;
+  display: inline-block;
+  background: none;
+  border: 1px solid map-get($colors, blue);
+  color: map-get($colors, txt-white);
+  transition: 500ms;
+  &:hover {
+    background-color: map-get($colors, blue);
+  }
+}
+.purchase-button {
+  border: 2px solid black;
+  padding: 5px 25px;
+  border-radius: 100px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  svg {
+    height: 15px;
+  }
+  a {
+    font-weight: 500;
+  }
+}

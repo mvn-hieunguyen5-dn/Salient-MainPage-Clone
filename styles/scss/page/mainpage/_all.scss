@@ -1,0 +1,15 @@
+.container {
+  height: fit-content; 
+  min-height: 100px;
+}
+section {
+  max-width: 100vw;
+  position: relative;
+}
+
+@import "section-1";
+@import "section-2";
+@import "section-3";
+@import "section-4";
+@import "section-5";
+@import "section-6";
