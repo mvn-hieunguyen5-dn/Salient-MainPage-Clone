@@ -3,6 +3,7 @@ import FlyingBird from "../../module/icon-and-svg/FlyingBird";
 import OutlineButton from "../../module/element/CustomButton";
 import Report from "../../module/page/home-page/Section-6/Line3/report";
 import Line4Banner3SVG from "../../module/page/home-page/Section-6/Line4/Line4Banner3SVG";
+import { InView } from "react-intersection-observer";
 import SampleWindows from "../../module/page/home-page/Section-1/sampleWindows";
 export default function Index() {
   return (
@@ -38,6 +39,7 @@ export default function Index() {
           <div className="color-block highlight-background"></div>
         </li>
       </ul>
+
       <ul className="flex-col-gap3">
         <li>
           <OutlineButton onClick={() => console.log()} type={2}>
@@ -54,9 +56,19 @@ export default function Index() {
         <FlyingBird />
       </div>
       <div>
+        <InView
+          as="div"
+          onChange={(inView, entry) => console.log("Inview:", inView)}
+          triggerOnce
+        >
+        </InView>
+      </div>
+      <div>
         <Report />
       </div>
       <Line4Banner3SVG />
+
+
     </div>
   );
 }

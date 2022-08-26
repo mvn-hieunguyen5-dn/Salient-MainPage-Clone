@@ -15,6 +15,7 @@ export default function Line4Banner3SVG() {
         contentVisibility: "visible",
       }}
     >
+      
       <g clipPath="url(#__lottie_element_2)">
         <g
           transform="matrix(2.9646201133728027,0,0,2.9646201133728027,164.96630859375,-487.8067626953125)"

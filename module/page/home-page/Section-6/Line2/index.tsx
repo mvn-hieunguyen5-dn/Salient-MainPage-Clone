@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import VideoL2B1 from "./Line2Banner1Video";
 import SVGL2B2 from "./Line2Banner2SVG";
-export default function index() {
+import { InView } from "react-intersection-observer";
+
+export default function Index() {
+  const [issView, setView] = useState(false);
   return (
     <div className="banner-line line-2">
       <div className="banner banner-1">
@@ -22,7 +25,12 @@ export default function index() {
           your site. Edits made in one location will instantly reflect in all
           instances where the section is used.
         </p>
-        <div className="img">
+        <InView
+          as="div"
+          triggerOnce
+          onChange={(inView, entry) => setView(inView)}
+        ></InView>
+        <div className={`img ${issView && "animated"}`}>
           <SVGL2B2 />
         </div>
       </div>

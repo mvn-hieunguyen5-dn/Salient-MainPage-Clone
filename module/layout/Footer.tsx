@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
+import { InView } from "react-intersection-observer";
 
 export default function Footer() {
+  const [isView, setView] = useState(false);
   return (
     <footer className="footer">
       <div className="footer-top">
+        <InView as="div" triggerOnce  onChange={(inView, entry) => setView(inView)}></InView>
         <h1>
-          Create a website that
+          Create a website that{" "}
           <em className="hightlight-header">
             <strong> stands out</strong>
-            <div className="basic-underline">
+            <div className={`basic-underline ${isView && "nectar-scribble"}`}>
               {" "}
               <svg
                 viewBox="-320 -70.8161 640.4 59.82"

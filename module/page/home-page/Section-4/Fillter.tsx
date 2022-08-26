@@ -10,7 +10,6 @@ export default function Fillter({
   selecting: Function;
 }) {
   const [isOpened, setOpen] = useState(false);
-  console.log(FillterStyle);
   
   return (
     <div className={FillterStyle.TittleModule} >

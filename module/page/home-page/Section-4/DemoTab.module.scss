@@ -1,18 +1,11 @@
 .Upper {
   z-index: 10;
-  // height: 23vw;
   height: 50%;
   width: 90%;
   position: relative;
   display: grid;
-  padding: 30px;
   padding-top: 0px;
   padding-right: 0px;
-  // fix to height fit
-  // .img {
-  //   width: 80%;
-  //   height: 80%;
-  // }
   .mobile {
     transition-duration: 0.4s;
     z-index: 30;
@@ -45,22 +38,11 @@
     .mobile {
       transform: translateY(-60%);
       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-      //--- fun
-      // width: 30%;
-      // right: 50%;
     }
   }
-
-  // &:hover {
-  //   .mobile {
-  //     transform: translateY(-50%);
-  //     transition-duration: 0.4s;
-  //   }
-  // }
 }
 .tittle {
-  padding-inline-start: 30px;
+  margin-top: 30px;
   
 }
 

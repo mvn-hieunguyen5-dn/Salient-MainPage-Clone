@@ -1,23 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import UserQuote from "../../../element/userQuote";
-export default function index() {
+// import TriggerOnScreen from "../../../element/TriggerOnScreen";
+import { InView } from "react-intersection-observer";
+export default function Index() {
+  const [viewVid, setViewVid] = useState(1);
   return (
     <section className="section section-function ">
       <div className="container">
         <div className="sticky-left ">
           <div className="video-container">
-            <div>
-              {" "}
+            <div className="video">
               <video
-                width="90%"
-                height="90%"
+                // width="100%"
+                height="100%"
                 preload="auto"
                 loop
                 muted
                 playsInline
                 autoPlay
                 className="fit-cover align-default nectar-lazy-video loaded"
-                style={{ visibility: "visible" }}
+                style={{
+                  visibility: viewVid === 1 ? "visible" : "hidden",
+                  opacity: viewVid === 1 ? "1" : "0",
+                }}
               >
                 <source
                   data-nectar-video-src="https://themenectar.com/salient/wp-content/uploads/sites/4/2022/07/studio-5.mp4"
@@ -25,10 +30,54 @@ export default function index() {
                   src="https://themenectar.com/salient/wp-content/uploads/sites/4/2022/07/studio-5.mp4"
                 />
               </video>
+
+              <video
+
+                height="100%"
+                preload="auto"
+                loop
+                muted
+                playsInline
+                autoPlay
+                className="fit-cover align-default nectar-lazy-video loaded"
+                style={{
+                  visibility: viewVid === 2 ? "visible" : "hidden",
+                  opacity: viewVid === 2 ? "1" : "0",
+                }}
+              >
+                <source
+                  data-nectar-video-src="https://themenectar.com/salient/wp-content/uploads/sites/4/2022/07/studio-5.mp4"
+                  type="video/mp4"
+                  src="https://themenectar.com/salient/wp-content/uploads/sites/4/2022/07/page-builder-1.mp4"
+                />
+              </video>
+
+              <video
+
+                height="100%"
+                preload="auto"
+                loop
+                muted
+                playsInline
+                autoPlay
+                className="fit-cover align-default nectar-lazy-video loaded"
+                style={{
+                  visibility: viewVid === 3 ? "visible" : "hidden",
+                  opacity: viewVid === 3 ? "1" : "0",
+                }}
+              >
+                <source
+                  data-nectar-video-src="https://themenectar.com/salient/wp-content/uploads/sites/4/2022/07/element-collection3.mp4"
+                  type="video/mp4"
+                  src="https://themenectar.com/salient/wp-content/uploads/sites/4/2022/07/element-collection3.mp4"
+                />
+              </video>
             </div>
           </div>
         </div>
+
         <div className="scrolling-right ">
+          {/* <TriggerOnScreen /> */}
           <article className="content-1">
             <h3>Template library</h3>
             <p className="block">
@@ -36,9 +85,30 @@ export default function index() {
               perpetually updated library of professional section templates,
               with currently over 400 to choose from — all created with passion
               and held to a high standard for aesthetic quality.
-            </p>
+            </p>{" "}
+            <UserQuote />{" "}
           </article>
-          <UserQuote />
+
+          <InView
+            as="div"
+            onChange={(inView, entry) => inView && setViewVid(1)}
+          ></InView>
+          <video
+            width="100%"
+            preload="auto"
+            loop
+            muted
+            playsInline
+            autoPlay
+            className="fit-cover align-default nectar-lazy-video loaded"
+            style={{ visibility: "visible" }}
+          >
+            <source
+              data-nectar-video-src="https://themenectar.com/salient/wp-content/uploads/sites/4/2022/07/studio-5.mp4"
+              type="video/mp4"
+              src="https://themenectar.com/salient/wp-content/uploads/sites/4/2022/07/studio-5.mp4"
+            />
+          </video>
           <div className="scrolling-right-blank-space"></div>
           {/* So it's gonna be forever
           Or it's gonna go down in flames */}
@@ -57,7 +127,27 @@ export default function index() {
               <li>Front-end & back-end editors</li>
               <li>Reusable global sections</li>
               <li>Tree-list element view</li>
-            </ul>
+            </ul>{" "}
+            <InView
+              as="div"
+              onChange={(inView, entry) => inView && setViewVid(2)}
+            ></InView>
+            <video
+              width="100%"
+              preload="auto"
+              loop
+              muted
+              playsInline
+              autoPlay
+              className="fit-cover align-default nectar-lazy-video loaded"
+              style={{ visibility: "visible" }}
+            >
+              <source
+                data-nectar-video-src="https://themenectar.com/salient/wp-content/uploads/sites/4/2022/07/studio-5.mp4"
+                type="video/mp4"
+                src="https://themenectar.com/salient/wp-content/uploads/sites/4/2022/07/page-builder-1.mp4"
+              />
+            </video>
           </article>
           <div className="scrolling-right-blank-space"></div>
           <article className="content-1">
@@ -69,7 +159,27 @@ export default function index() {
               actively seek to bring fresh innovation by pushing the boundaries
               of what’s possible on the web.
             </p>
-            <UserQuote />
+            <UserQuote />{" "}
+            <InView
+              as="div"
+              onChange={(inView, entry) => inView && setViewVid(3)}
+            ></InView>
+            <video
+              width="100%"
+              preload="auto"
+              loop
+              muted
+              playsInline
+              autoPlay
+              className="fit-cover align-default nectar-lazy-video loaded"
+              style={{ visibility: "visible" }}
+            >
+              <source
+                data-nectar-video-src="https://themenectar.com/salient/wp-content/uploads/sites/4/2022/07/studio-5.mp4"
+                type="video/mp4"
+                src="https://themenectar.com/salient/wp-content/uploads/sites/4/2022/07/element-collection3.mp4"
+              />
+            </video>
           </article>
         </div>
       </div>

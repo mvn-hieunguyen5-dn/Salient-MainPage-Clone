@@ -2,7 +2,9 @@ import Image from "next/image";
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faBars } from "@fortawesome/free-solid-svg-icons";
+
 export default function Header() {
+
   const ImgLink = {
     logo: "https://themenectar.com/salient/wp-content/uploads/sites/4/2020/04/dark-non-retina.png",
   };

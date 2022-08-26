@@ -5,13 +5,16 @@ import DemoType from "../../../../interface/DemoType";
 import { spawn } from "child_process";
 interface typeProp {
   demo:DemoType;
+  setEnter: Function;
 }
-export default function DemoTab({demo}:typeProp) {
+export default function DemoTab({demo,setEnter}:typeProp) {
   const [hoverSc, setHoverSc] = useState(true);
   
   return (
     <div
       className="section-demo-items-list-element"
+      onMouseEnter={()=>setEnter(true)}
+      onMouseLeave={()=>setEnter(false)}
     >
       <div className={DemoStyle.Upper + " " + (hoverSc && DemoStyle.hovered)}>
         <Image
@@ -27,7 +30,7 @@ export default function DemoTab({demo}:typeProp) {
           <Image
             src={demo.mobile}
             width={1080}
-            height={1920}
+            height={2020}
             alt="demo picture"
             // layout="fill"
             // className={DemoStyle.img}

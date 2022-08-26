@@ -27,7 +27,7 @@
       color: map-get($colors, txt-white);
       margin-bottom: 30px;
     }
-    
+
     .banner {
       flex-grow: 1;
       padding: 4vw;
@@ -87,10 +87,19 @@
     }
     .banner-2 {
       width: 40%;
+
       .img {
         padding-inline: 20px;
         filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03))
           drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+
+        transition-duration: 2s;
+        &.animated,
+        path,
+        image {
+          animation: FadeUpAnimation 1.3s cubic-bezier(0.65, 0, 0.35, 1)
+            forwards;
+        }
       }
     }
   }
@@ -129,6 +138,12 @@
       right: 0%;
       transform: translateX(50%);
       top: 25%;
+      opacity: 0;
+
+      &.animated {
+        animation: S6L3FadeUp 1.3s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+        opacity: 1;
+      }
     }
     .black-button {
       margin-top: 20px;
@@ -148,8 +163,8 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
-      .banner-2{
-        flex-shrink: 0 ;
+      .banner-2 {
+        flex-shrink: 0;
         background-color: #354ff6;
         color: white;
         display: flex;
@@ -158,16 +173,18 @@
         height: fit-content;
         max-height: 45%;
         overflow: hidden;
-        &-left{
-          max-width: 35%;
+        position: relative;
+        &-left {
+          max-width: 45%;
           height: fit-content;
         }
         .img {
-          width: 20vw;
+          width: 40%;
           flex-grow: 1;
           justify-self: end;
-          position: relative;
-          right: -5%;
+          position: absolute;
+          right: 5%;
+          bottom: -15%;
         }
       }
       .banner-3 {
@@ -176,6 +193,37 @@
           overflow: auto;
         }
       }
+    }
+  }
+  .line-5 {
+    .banner {
+      max-width: 50%;
+    }
+    .banner-1 {
+      position: relative;
+      overflow: hidden;
+      .description {
+        width: 75%;
+        margin-bottom: 60%;
+      }
+      .img {
+        * {
+          display: block !important;
+        }
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+      }
+    }
+    .banner-2 {
+      background-image: url("https://themenectar.com/salient/wp-content/uploads/sites/4/2022/07/surface-HVrda0rOHqk-unsplash-1-1.jpg");
+      background-position: center bottom;
+      object-fit: cover;
+      min-height: 500px;
+      object-position: bottom;
+      background-size: cover;
+      color: map-get($colors, txt-white);
     }
   }
 }
@@ -187,14 +235,20 @@
       flex-direction: column;
     }
 
-    .line-1 .banner {
-      max-width: none;
-      padding: 8vw;
+    .banner {
+      padding: 8vw !important;
     }
-
-    .line-2 .banner-1,
-    .line-2 .banner-2 {
+    .line-1 .banner,
+    .line-2 .banner,
+    .line-2 .banner,
+    .line-4 .banner,
+    .line-5 .banner {
+      max-width: 100%;
       width: 100%;
+    }
+    .line-4-right .banner-2 .img {
+      width: 40%;
+      overflow: auto;
     }
   }
 }

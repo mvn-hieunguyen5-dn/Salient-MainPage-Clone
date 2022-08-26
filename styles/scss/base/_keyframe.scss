@@ -1,0 +1,36 @@
+@keyframes FadeUpAnimation {
+  0% {
+    opacity: 0;
+    // transform: translateY(115%);
+    transform: translate(0px, 50px);
+  }
+
+  100% {
+    // opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes S6L3FadeUp{
+  0% {
+    opacity: 0;
+    // transform: translateY(115%);
+    transform: translate(50%, 50px);
+  }
+
+  100% {
+    // opacity: 1;
+    transform: translate(50%, 0px);
+  }
+}
+@keyframes StokeAnimation {
+  0% {
+    stroke-dashoffset: 1;
+    opacity: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}

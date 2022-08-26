@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import CustomButton from "../../../../element/CustomButton";
 import Image from "next/image";
 import Report from "./report";
-export default function index() {
+import { InView } from "react-intersection-observer";
+export default function Index() {
+  const [animated, setAnimated] = useState(false);
   return (
     <div className="banner-line line-3">
       <h4>Powerful WooCommerce Functionality</h4>
@@ -24,9 +26,11 @@ export default function index() {
           layout="intrinsic"
           alt="sd"
         />
-        <div className="popup">
-          <Report />
-        </div>
+        <InView as="div" triggerOnce  onChange={(inView, entry) => setAnimated(inView)}>
+          <div className={`popup ${animated && "animated"}`}>
+            <Report />
+          </div>
+        </InView>
       </div>
     </div>
   );

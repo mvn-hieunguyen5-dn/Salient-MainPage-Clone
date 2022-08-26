@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
 interface Props {
-  isTest? : boolean;
+  isTest?: boolean;
 }
-export default function FlyingBird({isTest = false}:Props) {
+export default function FlyingBird({ isTest = false }: Props) {
   const [transform, setTransform] = useState(-195);
   const [isUp, setIsUp] = useState(true);
   useEffect(() => {
     const animation = setInterval(function () {
-      console.log("loop");
-
       if (transform === -225) setIsUp(true);
 
       if (transform === -175) setIsUp(false);
@@ -19,7 +17,7 @@ export default function FlyingBird({isTest = false}:Props) {
     };
   });
   return (
-    <div style={{width:"100%",height:"100%", display:"absolute"}}>
+    <div style={{ width: "100%", height: "100%", display: "absolute" }}>
       <div
         className="nectar-lottie"
         data-lottie-settings='{"trigger_type":"autoplay","mobile_func":"default","loop":"true","frame_constraint":"0.00,100.00","speed":"0.7","width_desktop":"8vw","width_tablet":"10vw","width_phone":"12vw","alignment":"left","preserve_aspect_ratio":"xMidYMid meet","json_url":"https:\/\/assets6.lottiefiles.com\/packages\/lf20_9r65d17y.json","box_shadow_method":"filter"}'
@@ -69,7 +67,6 @@ export default function FlyingBird({isTest = false}:Props) {
                   fillOpacity="1"
                   d=" M10.185999870300293,76.72599792480469 C10.185999870300293,76.72599792480469 -80.22899627685547,-49.183998107910156 -80.22899627685547,-49.183998107910156 C-80.22899627685547,-49.183998107910156 -47.53499984741211,-76.39299774169922 -47.53499984741211,-76.39299774169922 C-47.53499984741211,-76.39299774169922 3.009000062942505,-69.43699645996094 3.009000062942505,-69.43699645996094 C3.009000062942505,-69.43699645996094 80.22899627685547,-2.0929999351501465 80.22899627685547,-2.0929999351501465 C80.22899627685547,-2.0929999351501465 63.96200180053711,76.61499786376953 63.96200180053711,76.61499786376953 C63.96200180053711,76.61499786376953 10.185999870300293,76.72599792480469 10.185999870300293,76.72599792480469z"
                 ></path>
-                
               </g>
               <g
                 opacity="1"
@@ -120,7 +117,7 @@ export default function FlyingBird({isTest = false}:Props) {
                 <path
                   fill="rgb(52,126,255)"
                   fillOpacity="1"
-                  d=" M-54.65599822998047,11.032999992370605 C-54.65599822998047,11.032999992370605 -4.862753868103027,16.57068634033203 -4.862753868103027,16.57068634033203 C-4.862753868103027,16.57068634033203 22.56399917602539,78.3759994506836 22.56399917602539,78.3759994506836 C22.56399917602539,78.3759994506836 -54.65599822998047,11.032999992370605 -54.65599822998047,11.032999992370605z"
+                  d=" M-54.65599822998047,11.032999992370605 C-54.65599822998047,11.032999992370605 18.306568145751953,-18.70669174194336 18.306568145751953,-18.70669174194336 C18.306568145751953,-18.70669174194336 22.56399917602539,78.3759994506836 22.56399917602539,78.3759994506836 C22.56399917602539,78.3759994506836 -54.65599822998047,11.032999992370605 -54.65599822998047,11.032999992370605z"
                 ></path>
               </g>
             </g>
@@ -129,7 +126,9 @@ export default function FlyingBird({isTest = false}:Props) {
       </div>
       {isTest ? (
         <ul className="flex-row-gap3">
-          <li><p>Position transform</p></li>
+          <li>
+            <p>Position transform</p>
+          </li>
           <li>
             <p>{transform}</p>
           </li>
