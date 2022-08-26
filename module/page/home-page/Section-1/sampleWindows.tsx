@@ -8,29 +8,28 @@ export default function SampleWindows() {
   };
   return (
     <div className="sample-windows">
-
-        <Image
-          src={LinkImg.header}
-          alt={`Logo`}
-          // layout="responsive"
-          // position={"static"}
-          height={92}
-          width={2400}
-          objectFit="cover"
-          className="header"
-        />
-        <Image
-          src={LinkImg.main}
-          alt={`Logo`}
-          // layout="responsive"
-          height={928}
-          width={2468}
-          // position={"static"}
-          objectFit="cover"
-          className="main"
-          
-        />
-
+      <Image
+        src={LinkImg.header}
+        alt={`Logo`}
+        // layout="responsive"
+        // position={"static"}
+        height={92}
+        width={2400}
+        objectFit="cover"
+        className="header"
+        priority
+      />
+      <Image
+        src={LinkImg.main}
+        alt={`Logo`}
+        // layout="responsive"
+        height={928}
+        width={2468}
+        // position={"static"}
+        objectFit="cover"
+        className="main"
+        priority
+      />
     </div>
   );
 }

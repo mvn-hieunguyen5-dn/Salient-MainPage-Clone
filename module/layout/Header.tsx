@@ -18,6 +18,7 @@ export default function Header() {
           // position={"static"}
           objectFit="cover"
           className="z-0"
+          priority
         />
       </div>
       <ul className="left-nav">
