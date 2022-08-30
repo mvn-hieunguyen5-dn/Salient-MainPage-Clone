@@ -17,11 +17,12 @@ export default function FlyingBird({ isTest = false }: Props) {
     };
   });
   return (
-    <div style={{ width: "100%", height: "100%", display: "absolute" }}>
+    <div >
       <div
         className="nectar-lottie"
         data-lottie-settings='{"trigger_type":"autoplay","mobile_func":"default","loop":"true","frame_constraint":"0.00,100.00","speed":"0.7","width_desktop":"8vw","width_tablet":"10vw","width_phone":"12vw","alignment":"left","preserve_aspect_ratio":"xMidYMid meet","json_url":"https:\/\/assets6.lottiefiles.com\/packages\/lf20_9r65d17y.json","box_shadow_method":"filter"}'
         id="nectar-lottie-1660526052742"
+        
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

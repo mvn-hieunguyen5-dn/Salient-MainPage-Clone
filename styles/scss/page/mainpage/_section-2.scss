@@ -1,5 +1,7 @@
 //Section 2 - sologan 
 //ENCHANT YOUR AUDIANCE
+
+
 .section-sologan{
   padding-block: 5vw;
 
@@ -10,6 +12,9 @@
     padding-inline: 18%;
     justify-items: stretch;
     // color: ;
+    *{
+      opacity: 0;
+    }
     .line {
       text-align: start;
       // font: map-get($map: , $key: );
@@ -35,5 +40,12 @@
     .line:nth-child(3) {
       justify-content: center;
     }
+    &.animated {
+      * {
+        animation: fadein 2s;
+        opacity: 1;
+      }
+    }
   }
+
 }

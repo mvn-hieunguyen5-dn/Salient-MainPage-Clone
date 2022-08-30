@@ -16,6 +16,32 @@ article {
   margin-block: 60px;
   .block {
     margin-block: 30px;
+    font-weight: map-get($font-weight, fade );
+    font-size: 17px;
+    line-height: 25px;
   }
 }
 
+%flex-center {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+
+  justify-content: center;
+}
+.flex-center {
+  @extend %flex-center;  
+}
+.flex-col {
+  flex-direction: column;
+}
+
+//Must delete after 
+.sticky-offSet {
+  position: absolute;
+  right: 10px;
+  padding: 5px 10px;
+  background-color: black;
+  color: white;
+}

@@ -6,12 +6,12 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-top">
-        <InView as="div" triggerOnce  onChange={(inView, entry) => setView(inView)}></InView>
+        <InView as="div" triggerOnce  onChange={(inView) => setView(inView)}></InView>
         <h1>
           Create a website that{" "}
           <em className="hightlight-header">
             <strong> stands out</strong>
-            <div className={`basic-underline ${isView && "nectar-scribble"}`}>
+            <em className={`basic-underline ${isView && "nectar-scribble"}`}>
               {" "}
               <svg
                 viewBox="-320 -70.8161 640.4 59.82"
@@ -26,7 +26,7 @@ export default function Footer() {
                   fill="none"
                 ></path>
               </svg>
-            </div>
+            </em>
           </em>{" "}
         </h1>
       </div>

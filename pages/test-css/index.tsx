@@ -7,7 +7,7 @@ import { InView } from "react-intersection-observer";
 import SampleWindows from "../../module/page/home-page/Section-1/sampleWindows";
 export default function Index() {
   return (
-    <div className="test-page">
+    <>
       <h1>Header 1</h1>
       <code>Cambo, Open Sans, 81px</code>
       <h2>Header 2</h2>
@@ -67,8 +67,9 @@ export default function Index() {
         <Report />
       </div>
       <Line4Banner3SVG />
+      <SampleWindows />
 
 
-    </div>
+    </>
   );
 }

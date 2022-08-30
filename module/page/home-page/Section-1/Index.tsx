@@ -1,8 +1,11 @@
-import React from "react";
+import React,{useState}from "react";
 import Image from "next/image";
 import SampleWindows from "./sampleWindows";
 import CustomButton from "../../../element/CustomButton"
+// import { InView } from "react-intersection-observer";
+
 export default function Index() {
+  const [isView, setView] = useState(true);
   const ImgLink = {
     p1: "https://themenectar.com/salient/wp-content/uploads/sites/4/2022/07/blue-1-140x140.jpg",
     p2: "https://themenectar.com/salient/wp-content/uploads/sites/4/2022/07/dmitriy-zub-w4NPe3L9_E8-unsplash-140x140.jpg",
@@ -11,6 +14,7 @@ export default function Index() {
   };
   return (
     <section className="secion-first-intro">
+      {/* <InView as="div" triggerOnce  onChange={(inView) => setView(inView)}></InView> */}
       <div className="first-intro-container">
         <div className="first-intro-content">
           <div className="first-intro-content-up">
@@ -19,7 +23,7 @@ export default function Index() {
                 <em className="hightlight-header">
                   <strong>Beautiful</strong>
                   <svg
-                    className="basic-underline"
+                    className={`basic-underline ${isView && "animated"} `}
                     viewBox="-400 -55 730 60"
                     preserveAspectRatio="none"
                   >

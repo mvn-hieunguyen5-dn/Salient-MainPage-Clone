@@ -9,8 +9,10 @@ body {
 
 }
 p,a {
-  line-height: 25.2px;
+  // line-height: 25.2px;
+  // what is this for ??
   font-family: "Roboto", "Open Sans", sans-serif;
+  // font-weight: map-get($font-weight, normal );
 }
 ul {
   list-style-type: none;

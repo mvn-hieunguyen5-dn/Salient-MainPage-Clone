@@ -3,7 +3,7 @@ import UserQuote from "../../../element/userQuote";
 // import TriggerOnScreen from "../../../element/TriggerOnScreen";
 import { InView } from "react-intersection-observer";
 export default function Index() {
-  const [viewVid, setViewVid] = useState(1);
+  const [viewVid, setViewVid] = useState(0);
   return (
     <section className="section section-function ">
       <div className="container">
@@ -11,8 +11,8 @@ export default function Index() {
           <div className="video-container">
             <div className="video">
               <video
-                // width="100%"
-                height="100%"
+                width="1800"
+                height="700"
                 preload="auto"
                 loop
                 muted
@@ -32,8 +32,8 @@ export default function Index() {
               </video>
 
               <video
-
-                height="100%"
+                width="1800"
+                height="700"
                 preload="auto"
                 loop
                 muted
@@ -53,8 +53,8 @@ export default function Index() {
               </video>
 
               <video
-
-                height="100%"
+                width="1800"
+                height="700"
                 preload="auto"
                 loop
                 muted
@@ -94,7 +94,8 @@ export default function Index() {
             onChange={(inView, entry) => inView && setViewVid(1)}
           ></InView>
           <video
-            width="100%"
+            width="1800"
+            height="700"
             preload="auto"
             loop
             muted
@@ -120,7 +121,7 @@ export default function Index() {
               supercharged power to handle complex designs and the flexibility
               to create <strong>any type of website.</strong>
             </p>
-            <ul className="list">
+            <ul className="list block">
               <li>Set option values unique based on screen size</li>
               <li>Sidebar & modal editing layout options</li>
               <li>Visually intuitive graphical settings UI</li>
@@ -133,7 +134,8 @@ export default function Index() {
               onChange={(inView, entry) => inView && setViewVid(2)}
             ></InView>
             <video
-              width="100%"
+              width="1800"
+              height="700"
               preload="auto"
               loop
               muted
@@ -165,7 +167,8 @@ export default function Index() {
               onChange={(inView, entry) => inView && setViewVid(3)}
             ></InView>
             <video
-              width="100%"
+              width="1800"
+              height="700"
               preload="auto"
               loop
               muted

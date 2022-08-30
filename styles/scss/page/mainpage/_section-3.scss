@@ -16,7 +16,7 @@
     min-width: calc(100vw / 7 * 4);
     flex-grow: 0;
     padding-left: 5vw;
-  
+
     .video-container {
       // background-color: black;
       position: -webkit-sticky;
@@ -34,19 +34,18 @@
         position: relative;
         height: 90%;
         width: 90%;
-        border-radius: 20px;
+        // border-radius: 20px;
         overflow: hidden;
-
       }
       video {
         position: absolute;
         top: 0;
         border-radius: 20px;
-        // transition-duration: 1s;
-        transition:  100ms;
-        // animation-duration: 1s;;
+        transition: 100ms;
         padding: 0px;
         margin: 0px;
+        width: 100%;
+        height: fit-content;
       }
     }
   }
@@ -83,6 +82,8 @@
       display: none;
       margin-block: 20px;
       border-radius: 10px;
+      width: 100%;
+      height: fit-content;
     }
   }
 }

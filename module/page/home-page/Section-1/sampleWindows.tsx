@@ -11,8 +11,6 @@ export default function SampleWindows() {
       <Image
         src={LinkImg.header}
         alt={`Logo`}
-        // layout="responsive"
-        // position={"static"}
         height={92}
         width={2400}
         objectFit="cover"
@@ -22,10 +20,9 @@ export default function SampleWindows() {
       <Image
         src={LinkImg.main}
         alt={`Logo`}
-        // layout="responsive"
         height={928}
         width={2468}
-        // position={"static"}
+
         objectFit="cover"
         className="main"
         priority

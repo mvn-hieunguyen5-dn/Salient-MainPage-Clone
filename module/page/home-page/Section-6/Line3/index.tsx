@@ -3,6 +3,8 @@ import CustomButton from "../../../../element/CustomButton";
 import Image from "next/image";
 import Report from "./report";
 import { InView } from "react-intersection-observer";
+
+
 export default function Index() {
   const [animated, setAnimated] = useState(false);
   return (

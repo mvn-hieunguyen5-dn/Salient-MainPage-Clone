@@ -10,8 +10,15 @@
 .fillterList {
   display: flex;
   gap: 20px;
+  justify-content: center;
   flex-direction: column;
   transition: all 0.2s ease-in-out;
+  flex-wrap: wrap;
+}
+.header { 
+  svg {
+    display: none;
+  }
 }
 @media only screen and (max-width: 1023px) {
   .TittleModule {
@@ -19,17 +26,27 @@
     align-items: center;
     gap: 10px;
   }
+
   .header {
-    border: 2px white solid;
-    padding: 10px 20px;
+    border: 1px white solid;
+    padding: 10px 30px;
+    text-align: center;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
     text-align: center;
 
-    border-radius: 20px;
-    &::before {
-      content: "+";
-      padding-bottom: 10px;
+    justify-content: center;
+    background: none;
+    color: white;
+
+    gap: 5px;
+    svg {
+      display: block;
     }
   }
+
   .fillterList {
     flex-direction: row;
     display: none;

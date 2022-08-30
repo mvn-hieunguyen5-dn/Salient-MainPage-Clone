@@ -6,7 +6,7 @@ interface Props {
   //outline button - blue-button - purchase-button
 }
 export default function OutlineButton({ children, onClick, type = 1 }: Props) {
-  const [theme, setTheme] = useState("");
+  const [theme, setTheme] = useState("outline-button");
   let charArr: string[] = children.split("");
   let t = 0.015;
   useEffect(() => {

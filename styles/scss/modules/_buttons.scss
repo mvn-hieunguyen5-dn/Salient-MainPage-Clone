@@ -24,6 +24,7 @@
   border-radius: 100px;
   border: none;
   max-width: fit-content;
+  transition-duration: 0s;
   // font-size: 2vw;
 
   &:hover {
@@ -52,14 +53,14 @@
   background: none;
   border: 1px solid map-get($colors, blue);
   color: map-get($colors, txt-white);
-  transition: 500ms;
+  // transition: 500ms;
   &:hover {
     background-color: map-get($colors, blue);
   }
 }
 .purchase-button {
-  border: 1px solid black;
-  padding: 5px 25px;
+  border: 1px solid #a4a4a4;
+  padding: 13px 25px;
   border-radius: 100px;
   background-color: white;
   display: flex;
@@ -70,5 +71,13 @@
   }
   a {
     font-weight: 500;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  button {
+    .char {
+      font-size: 16px;
+    }
   }
 }

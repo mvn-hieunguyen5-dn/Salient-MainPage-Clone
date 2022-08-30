@@ -3,6 +3,7 @@ import DemoTab from "./DemoTab";
 import { data } from "./DemoData";
 import DemoType from "../../../../interface/DemoType";
 import Fillter from "./Fillter";
+import CustomButton from "../../../element/CustomButton";
 interface listItem {
   id: number;
   tittle: string;
@@ -86,14 +87,23 @@ export default function Index() {
             selecting={(v: number) => selecting(v)}
           />
         </div>
-        <div className="section-demo-items-list">
-          {data.map((data: DemoType) => (
-            <DemoTab
-              key={data.id}
-              demo={data}
-              setEnter={(value: boolean) => setEnterView(value)}
-            />
-          ))}
+        <div className="">
+          {" "}
+          <div className="section-demo-items-list">
+            {data.map((data: DemoType) => (
+              <DemoTab
+                key={data.id}
+                demo={data}
+                setEnter={(value: boolean) => setEnterView(value)}
+              />
+            ))}
+          </div>
+          <div className="flex-center">
+            <CustomButton onClick={() => {console.log("ss");
+            }} type={2}>
+              Load more
+            </CustomButton>
+          </div>
         </div>
       </div>
     </section>
