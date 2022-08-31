@@ -17,18 +17,26 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  h1 {
-    overflow-wrap: normal;
-    word-break: normal;
-    text-align: center;
+  .tittle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
     padding-inline: 25vw;
-    padding-block: 20%;
-    height: fit-content;
-    display: block;
-    font-size: 6vw;
-    * {
-      font-size: 5vw;
+    padding-block: 15%;
+    // display: block;
+    gap:100px;
+    h1{
+      overflow-wrap: normal;
+      font-size: 6vw;
+      height: fit-content;
+      word-break: normal;
+      text-align: center;
+      
     }
+    // * {
+    //   font-size: 5vw;
+    // }
     path {
       stroke-dasharray: 1;
       stroke-dashoffset: 0;
@@ -63,6 +71,7 @@
       line-height: inherit;
     }
   }
+
   &-bottom {
     font-weight: map-get($font-weight, fade);
     display: flex;
@@ -81,7 +90,7 @@
 @media only screen and (max-width: map-get($breakpoints, large)) {
   .footer {
     h1 {
-      padding-inline: 5vw;
+      // padding-inline: 5vw;
 
       width: fit-content;
       font-size: 7vw;
