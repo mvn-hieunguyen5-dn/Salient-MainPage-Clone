@@ -17,6 +17,7 @@
   }
 }
 %button {
+  cursor: pointer;
   padding-top: 0.8em;
   padding-right: 2em;
   padding-bottom: 0.8em;
@@ -60,7 +61,7 @@
 }
 .purchase-button {
   border: 1px solid #a4a4a4;
-  padding: 13px 25px;
+  padding: 10px 25px;
   border-radius: 100px;
   background-color: white;
   display: flex;

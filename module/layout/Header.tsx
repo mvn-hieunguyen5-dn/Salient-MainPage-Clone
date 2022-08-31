@@ -2,7 +2,13 @@ import Image from "next/image";
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faBars } from "@fortawesome/free-solid-svg-icons";
-import { WhatNews, Elements,Portfolio } from "./HeaderDropBar";
+import {
+  WhatNews,
+  Elements,
+  Portfolio,
+  Blog,
+  WooCommerce,
+} from "./HeaderDropBar";
 
 export default function Header({ isHideHeader }: { isHideHeader: boolean }) {
   const ImgLink = {
@@ -42,9 +48,11 @@ export default function Header({ isHideHeader }: { isHideHeader: boolean }) {
         </li>
         <li className="left-nav-item">
           <a>Blog</a>
+          <Blog />
         </li>
         <li className="left-nav-item">
           <a>WooCommercce</a>
+          <WooCommerce />
         </li>
       </ul>
       <div className="blank-space"></div>

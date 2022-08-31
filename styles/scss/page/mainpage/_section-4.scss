@@ -36,15 +36,10 @@
     align-content: stretch;
     flex: 0 0 auto;
     &-filter {
-      // padding-right: 50px;
       flex-shrink: 0;
       display: block;
-      // background: white;
-      // height: 100%;
       flex-grow: 1;
-      // overflow: -moz-hidden-unscrollable;
       position: relative;
-
       .item {
         padding-left: 30px;
         position: relative;

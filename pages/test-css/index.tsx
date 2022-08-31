@@ -66,7 +66,10 @@ export default function Index() {
       <div>
         <Report />
       </div>
+      <div>
+
       <Line4Banner3SVG />
+      </div>
       <SampleWindows />
 
 

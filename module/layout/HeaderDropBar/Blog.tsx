@@ -1,7 +1,7 @@
 import React from "react";
 import GroupLink from "../../../interface/HeaderLinkType";
 
-export default function Portfolio() {
+export default function Blog() {
   const MediaG: GroupLink = {
     tittle: "Media",
     childLinks: [
@@ -139,14 +139,17 @@ export default function Portfolio() {
           className="img-left"
           style={{
             backgroundImage:
-              "url(https://themenectar.com/salient/wp-content/uploads/sites/4/2021/05/adomas-aleno-4vrZpOo7fTc-unsplash-1024x683.jpg)",
+              "url(https://themenectar.com/salient/wp-content/uploads/sites/4/2021/05/laura-chouette-6cDHqxCEAZ8-unsplash-1024x768.jpg)",
           }}
         >
-          <div className="font-layer">
-            <h3>Portfolio</h3>
+          <div
+            className="font-layer"
+            style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+          >
+            <h3>Blog</h3>
             <p>
-              Unmatched creative freedom for portfolios. With Salient, you can
-              showcase your projects and get them the attention they deserve.
+              From magazines all the way to personal journals, Salient can
+              handle any type of blog.
             </p>
           </div>
         </li>

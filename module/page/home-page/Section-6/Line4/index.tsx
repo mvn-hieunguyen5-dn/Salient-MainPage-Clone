@@ -1,6 +1,8 @@
 import React from "react";
 import L4B3SVG from "./Line4Banner3SVG";
+import L4b3SVGF from "../../../../../image/CoreWebViture.svg"
 import Image from "next/image";
+import { ReactSVG } from 'react-svg'
 export default function Index() {
   return (
     <div className="banner-line line-4">
@@ -53,7 +55,9 @@ export default function Index() {
             speed scoring. View the report from GTMetrix or Google Lighthouse.
           </p>
           <div className="img">
-            <L4B3SVG />
+            {/* <L4B3SVG />
+             */}
+             <ReactSVG src={L4b3SVGF.src} />
           </div>
         </div>
       </div>

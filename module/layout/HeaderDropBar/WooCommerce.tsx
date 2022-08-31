@@ -1,7 +1,10 @@
 import React from "react";
 import GroupLink from "../../../interface/HeaderLinkType";
-
-export default function Portfolio() {
+import Eye from "../../icon-and-svg/EyeIconSVG";
+import ProductIcon from "../../icon-and-svg/ProductIconSVG";
+import SlideFIllter from "../../icon-and-svg/SlideFIllterSVG";
+import CartSVG from "../../icon-and-svg/CartSVG";
+export default function WooCommerce() {
   const MediaG: GroupLink = {
     tittle: "Media",
     childLinks: [
@@ -28,28 +31,6 @@ export default function Portfolio() {
       {
         id: 7,
         tittle: "Image Carousel",
-      },
-    ],
-  };
-  const QueryG: GroupLink = {
-    tittle: "Query",
-    childLinks: [
-      {
-        id: 1,
-        tittle: "Post GridHot",
-        color: "red",
-      },
-      {
-        id: 2,
-        tittle: "Category Grid",
-      },
-      {
-        id: 3,
-        tittle: "Recent Posts",
-      },
-      {
-        id: 4,
-        tittle: "Global SectionNew",
       },
     ],
   };
@@ -139,25 +120,63 @@ export default function Portfolio() {
           className="img-left"
           style={{
             backgroundImage:
-              "url(https://themenectar.com/salient/wp-content/uploads/sites/4/2021/05/adomas-aleno-4vrZpOo7fTc-unsplash-1024x683.jpg)",
+              "url(https://themenectar.com/salient/wp-content/uploads/sites/4/2021/05/eberhard-grossgasteiger-QcmwbZsQuro-unsplash-1024x721.jpg)",
           }}
         >
-          <div className="font-layer">
-            <h3>Portfolio</h3>
+          <div
+            className="font-layer"
+            style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+          >
+            <h3>WooCommerce</h3>
             <p>
-              Unmatched creative freedom for portfolios. With Salient, you can
-              showcase your projects and get them the attention they deserve.
+              Deep WooCommerce integration with tons of powerful options only
+              available in Salient.
             </p>
           </div>
         </li>
-        <li>
-          <ul className="elements-drop-links">
-            <p>{MediaG.tittle}</p>
-            {MediaG.childLinks.map((M) => (
-              <li key={M.id}>
-                <a href="">{M.tittle}</a>{" "}
-              </li>
-            ))}
+        <li className="woo-line">
+          <ul className="elements-drop-links ">
+            <li className="woo-box">
+              <div>
+                <Eye />
+              </div>
+
+              <div>
+                <a href="">Product quick view</a>
+                <p>increase your sales.</p>
+              </div>
+            </li>
+            <li className="woo-box">
+              <div>
+                <ProductIcon />
+              </div>
+
+              <div>
+                <a href="">Product Layouts</a>
+                <p>Highly customizable options.</p>
+              </div>
+            </li>
+
+            <li className="woo-box">
+              <div>
+                <SlideFIllter />
+              </div>
+
+              <div>
+                <a href="">Side Filter Area</a>
+                <p>Sticky and toggle functionality.</p>
+              </div>
+            </li>
+            <li className="woo-box">
+              <div>
+                <CartSVG />
+              </div>
+
+              <div>
+                <a href="">AJAX Cart</a>
+                <p>Most advanced on the market.</p>
+              </div>
+            </li>
           </ul>
         </li>
         <li>
