@@ -24,7 +24,7 @@
   }
 
   100% {
-    // opacity: 1;
+    opacity: 1;
     transform: translate(0px, 0px);
   }
 }
@@ -50,5 +50,15 @@
   }
   100% {
     stroke-dashoffset: 0;
+  }
+}
+@keyframes HeaderStartup {
+  from {
+    opacity: 0;
+    max-height: 0px;
+  }
+  to {
+    opacity: 1;
+    max-height: 80px;
   }
 }

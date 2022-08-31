@@ -1,11 +1,11 @@
-import React,{useState}from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import SampleWindows from "./sampleWindows";
-import CustomButton from "../../../element/CustomButton"
-// import { InView } from "react-intersection-observer";
+import CustomButton from "../../../element/CustomButton";
+import { InView } from "react-intersection-observer";
 
 export default function Index() {
-  const [isView, setView] = useState(true);
+  const [isView, setView] = useState(false);
   const ImgLink = {
     p1: "https://themenectar.com/salient/wp-content/uploads/sites/4/2022/07/blue-1-140x140.jpg",
     p2: "https://themenectar.com/salient/wp-content/uploads/sites/4/2022/07/dmitriy-zub-w4NPe3L9_E8-unsplash-140x140.jpg",
@@ -18,29 +18,37 @@ export default function Index() {
       <div className="first-intro-container">
         <div className="first-intro-content">
           <div className="first-intro-content-up">
-            <div className="first-intro-content-up-tittle">
-              <h1>
-                <em className="hightlight-header">
-                  <strong>Beautiful</strong>
-                  <svg
-                    className={`basic-underline ${isView && "animated"} `}
-                    viewBox="-400 -55 730 60"
-                    preserveAspectRatio="none"
-                  >
-                    <path
-                      style={{ animationDuration: "1.3s" }}
-                      d="m -383.25 -6 c 55.25 -22 130.75 -33.5 293.25 -38 c 54.5 -0.5 195 -2.5 401 15"
-                      stroke="#ffffff"
-                      pathLength="1"
-                      strokeWidth="8"
-                      fill="none"
-                    ></path>
-                  </svg>
-                </em>{" "}
-                websites with less work
-              </h1>
-              <CustomButton onClick={()=>""} > Explore Features </CustomButton>
-            </div>
+            <InView
+              triggerOnce
+              delay={1000}
+              className="first-intro-content-up-tittle"
+              onChange={(inView) => setView(inView)}
+            >
+                <h1>
+                  <em className="hightlight-header">
+                    <strong>Beautiful</strong>
+
+                    <svg
+                      className={`basic-underline ${isView && "animated"} `}
+                      viewBox="-400 -55 730 60"
+                      preserveAspectRatio="none"
+                    >
+                      <path
+                        style={{ animationDuration: "1.3s" }}
+                        d="m -383.25 -6 c 55.25 -22 130.75 -33.5 293.25 -38 c 54.5 -0.5 195 -2.5 401 15"
+                        stroke="#ffffff"
+                        pathLength="1"
+                        strokeWidth="8"
+                        fill="none"
+                      ></path>
+                    </svg>
+                  </em>{" "}
+                  websites with less work
+                </h1>
+                <CustomButton onClick={() => ""}>
+                  Explore Features
+                </CustomButton>
+            </InView>
             <div className="first-intro-content-up-decription">
               <p className="content">
                 Salient is a next-generation WordPress theme that brings

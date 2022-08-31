@@ -1,6 +1,8 @@
 .section-function {
   max-width: 100vw;
   // overflow: hidden;
+  padding-block: 70px;
+
   .container {
     display: flex;
     // justify-content: stretch;
@@ -8,33 +10,36 @@
     position: relative;
     min-height: 200px;
     width: 100%;
-    padding-block: 40px;
-    // gap: 1%;
+    // gap: 20px;
+    padding-inline: 6vw;
+
+
   }
   .sticky-left {
     // left: 0px;
     min-width: calc(100vw / 7 * 4);
     flex-grow: 0;
-    padding-left: 5vw;
+    // padding-left: 5vw;
 
     .video-container {
       // background-color: black;
       position: -webkit-sticky;
       position: sticky;
-      top: 15%;
+      top: 10%;
       // transform: translateY(-50%);
+      padding-right: 10%;
       height: 600px;
       width: 100%;
       display: flex;
       align-items: center;
       justify-items: left;
       overflow: hidden;
-      transition-duration: 1s;
+      transition-duration: 2s;
       .video {
         position: relative;
-        height: 90%;
-        width: 90%;
-        // border-radius: 20px;
+        height: 100%;
+        width: 100%;
+        border-radius: 20px;
         overflow: hidden;
       }
       video {
@@ -44,15 +49,17 @@
         transition: 100ms;
         padding: 0px;
         margin: 0px;
-        width: 100%;
-        height: fit-content;
+        width: 104%;
+        height: 100%;
+        display: inline-block;
+        object-fit: cover;
       }
     }
   }
   .scrolling-right {
     flex-grow: 1;
     // background-color: gray;
-    padding-inline: 5vw;
+    // padding-inline: 5vw;
     margin-block: 4%;
     flex-grow: 0;
     // height: 2000px;

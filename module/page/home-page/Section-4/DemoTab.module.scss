@@ -43,12 +43,13 @@
 }
 .tittle {
   margin-top: 30px;
-  
+  display: flex;
+  align-items: baseline;
 }
 
-.tittle,
+.dec,
 .new {
-  h5::after {
+  .tittle::after {
     content: "New";
     padding: 5px 12px;
     font-size: 13px;
@@ -60,5 +61,26 @@
     position: relative;
     display: inline-block;
     left: 14px;
+  }
+}
+.dec {
+  h5 {
+    display: block;
+    position: relative;
+    padding: 0.2em 0;
+    overflow: hidden;
+    // transform: translate3d(-100%, 0, 0);
+  }
+  h5::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+    transform: translate3d(-100%, 0, 0);
   }
 }

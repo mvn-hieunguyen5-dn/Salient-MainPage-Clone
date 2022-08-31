@@ -4,17 +4,17 @@ import DemoStyle from "./DemoTab.module.scss";
 import DemoType from "../../../../interface/DemoType";
 import { spawn } from "child_process";
 interface typeProp {
-  demo:DemoType;
+  demo: DemoType;
   setEnter: Function;
 }
-export default function DemoTab({demo,setEnter}:typeProp) {
+export default function DemoTab({ demo, setEnter }: typeProp) {
   const [hoverSc, setHoverSc] = useState(true);
-  
+
   return (
     <div
       className="section-demo-items-list-element"
-      onMouseEnter={()=>setEnter(true)}
-      onMouseLeave={()=>setEnter(false)}
+      onMouseEnter={() => setEnter(true)}
+      onMouseLeave={() => setEnter(false)}
     >
       <div className={DemoStyle.Upper + " " + (hoverSc && DemoStyle.hovered)}>
         <Image
@@ -39,11 +39,14 @@ export default function DemoTab({demo,setEnter}:typeProp) {
         </div>
       </div>
 
-      <div className={DemoStyle.tittle}>
-        <h5>{demo.tittle} </h5>
-        {
-          demo.type.map((t)=><span key={t}>{t}</span>)
-        }
+      <div className={DemoStyle.dec}>
+        <div className={DemoStyle.tittle}>
+          <h5>{demo.tittle} </h5>
+        </div>
+
+        {demo.type.map((t) => (
+          <span key={t}>{t}</span>
+        ))}
       </div>
     </div>
   );

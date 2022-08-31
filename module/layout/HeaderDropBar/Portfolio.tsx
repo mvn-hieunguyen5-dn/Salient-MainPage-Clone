@@ -1,7 +1,7 @@
 import React from "react";
 import GroupLink from "../../../interface/HeaderLinkType";
 
-export default function Elements() {
+export default function Portfolio() {
   const MediaG: GroupLink = {
     tittle: "Media",
     childLinks: [

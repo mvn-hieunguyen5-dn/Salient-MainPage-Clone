@@ -12,7 +12,9 @@
     0 8px 10px -6px rgb(0 0 0 / 0.1);
   &-content {
     font-weight: map-get($font-weight, medium);
-    font-size: 16px;
+    font-size: 17px;
+    font-weight: map-get($font-weight, medium );
+    line-height: 25px;
   }
   &-info {
     display: flex;

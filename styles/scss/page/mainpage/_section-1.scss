@@ -1,19 +1,26 @@
 @keyframes main-intro-animation {
   from {
+    opacity: 0;
     margin-inline: 0%;
     margin-top: -20px;
   }
   to {
+    opacity: 1;
     margin-inline: 2%;
     margin-top: 0px;
   }
 }
 .secion-first-intro {
   margin-inline: 2%;
-  animation: main-intro-animation 1s;
+  animation: main-intro-animation 2s;
+
   margin-bottom: 20px;
   height: fit-content;
   max-width: 100vw;
+
+  * {
+    animation: FadeUpAnimation 2s;
+  }
 }
 .first-intro {
   &-container {
@@ -98,13 +105,16 @@
     left: 0;
     bottom: -7%;
     path {
-      stroke-dasharray: 1;
+      stroke-dasharray: 0;
       stroke-dashoffset: 0;
+      opacity: 0;
     }
     &.animated {
       path {
-        animation-delay: 3s;
-        animation: StokeAnimation 1.3s;
+        animation: StokeAnimation 3s;
+        // animation-delay: 2s;
+        stroke-dasharray: 1;
+        opacity: 1;
       }
     }
   }

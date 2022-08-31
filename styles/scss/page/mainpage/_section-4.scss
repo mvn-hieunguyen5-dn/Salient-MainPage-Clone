@@ -103,6 +103,7 @@
         margin-bottom: 50px;
         margin-left: 4%;
         position: relative;
+        cursor: pointer;
         h5 {
           font-family: Plus Jakarta Sans;
           letter-spacing: -0.03em;
@@ -124,11 +125,21 @@
           line-height: 13px;
           font-weight: 400 !important;
         }
+        img {
+          animation: FadeUpAnimation 1s;
+        }
         &:hover {
-          h5 {
-            text-decoration: underline rgb(255, 255, 255);
-            text-underline-offset: 8px;
-            transition-duration: 0.7s;
+          h5::after {
+            overflow: auto;
+            transform: translate3d(0, 0, 0);
+            opacity: 1;
+          }
+        }
+        &:left {
+          h5::after {
+            overflow: auto;
+            transform: translate3d(100%, 0, 0);
+            opacity: 1;
           }
         }
       }

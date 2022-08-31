@@ -25,13 +25,14 @@
     padding-block: 20%;
     height: fit-content;
     display: block;
-    font-size: 5vw;
+    font-size: 6vw;
     * {
       font-size: 5vw;
     }
     path {
       stroke-dasharray: 1;
       stroke-dashoffset: 0;
+      opacity: 0;
     }
     .nectar-scribble path {
       stroke-linecap: round;

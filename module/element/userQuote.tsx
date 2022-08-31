@@ -1,6 +1,14 @@
 import React from "react";
 import Image from "next/image";
 export default function userQuote() {
+  const Quotes = [
+    {
+      id: 1,
+      quote: `“Salient is a fantastic theme — It wouldn’t be wrong to say that it is
+  one of the best WordPress multipurpose themes available in the market.”`,
+  name:""
+    },
+  ];
   return (
     <div className="user-quote">
       <p className="user-quote-content">

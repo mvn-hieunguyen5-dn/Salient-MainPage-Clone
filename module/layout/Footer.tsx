@@ -6,12 +6,11 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-top">
-        <InView as="div" triggerOnce  onChange={(inView) => setView(inView)}></InView>
         <h1>
           Create a website that{" "}
           <em className="hightlight-header">
             <strong> stands out</strong>
-            <em className={`basic-underline ${isView && "nectar-scribble"}`}>
+            <em className={`basic-underline ${isView && "animated"}`}>
               {" "}
               <svg
                 viewBox="-320 -70.8161 640.4 59.82"
@@ -29,6 +28,8 @@ export default function Footer() {
             </em>
           </em>{" "}
         </h1>
+        <InView as="div" triggerOnce  onChange={(inView) => setView(inView)}></InView>
+
       </div>
       <div className="footer-bottom">
         <p>© 2022 Salient.</p>

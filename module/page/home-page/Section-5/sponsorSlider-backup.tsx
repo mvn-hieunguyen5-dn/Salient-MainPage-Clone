@@ -77,6 +77,8 @@ export default function SponsorSlider() {
             alt="sponsor"
             height={113}
             width={373}
+            loading="eager"
+
             // layout="fill"
           />{" "}
         </div>

@@ -15,12 +15,12 @@
   .banner-line {
     display: flex;
     align-items: stretch;
-    gap: 20px;
-    margin-block: 20px;
+    // gap: 20px;
+    // margin-block: 20px;
     .new {
       background-color: #354ff6;
       width: fit-content;
-      padding: 1px 13px 1px 13px;
+      padding: 7px 13px 7px 13px;
       font-weight: map-get($font-weight, fade);
       font-size: map-get($inline, tiny);
       border-radius: 20px;
@@ -31,6 +31,10 @@
     .banner {
       flex-grow: 1;
       padding: 4vw;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      margin-top: 10px;
       background-color: white;
       border-radius: 25px;
     }
@@ -75,7 +79,7 @@
 
   .line-2 {
     .banner-1 {
-      width: 60%;
+      width: 51vw;
       flex-grow: 1;
       .img {
         width: 100%;
@@ -94,60 +98,73 @@
           drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
 
         transition-duration: 2s;
+        opacity: 0;
         &.animated,
         path,
         image {
           animation: FadeUpAnimation 1.3s cubic-bezier(0.65, 0, 0.35, 1)
             forwards;
+          opacity: 1;
         }
       }
     }
   }
 
   .line-3 {
-    background-image: url(https://themenectar.com/salient/wp-content/uploads/sites/4/2022/08/timothy-johnson-rJyRei5D0dg-unsplash-1.jpg);
-    height: fit-content;
-    will-change: transform;
-    background-position: center bottom;
-    object-position: bottom;
-    background-size: cover;
-    background-attachment: scroll;
-    border-radius: 25px;
-    padding-top: 7vw;
-    flex-direction: column;
-    align-items: center;
-    padding-inline: 15vw;
-    justify-content: end;
-    color: map-get($colors, txt-white);
-    text-align: center;
-    .img {
-      img {
-        border-top-left-radius: 25px;
-        border-top-right-radius: 25px;
-      }
-      span {
-        display: block !important;
-      }
+    .banner-1 {
+      padding-bottom: 0 !important;
       position: relative;
-      margin: 0px;
-    }
-
-    .popup {
-      position: absolute;
-      width: 13vw;
-      right: 0%;
-      transform: translateX(50%);
-      top: 25%;
-      opacity: 0;
-
-      &.animated {
-        animation: S6L3FadeUp 1.3s cubic-bezier(0.65, 0, 0.35, 1) forwards;
-        opacity: 1;
+      background-image: url(https://themenectar.com/salient/wp-content/uploads/sites/4/2022/08/timothy-johnson-rJyRei5D0dg-unsplash-1.jpg);
+      height: fit-content;
+      will-change: transform;
+      background-position: center bottom;
+      object-position: bottom;
+      background-size: cover;
+      background-attachment: scroll;
+      border-radius: 25px;
+      padding-top: 7vw;
+      flex-direction: column;
+      align-items: center;
+      padding-inline: 15vw;
+      justify-content: end;
+      color: map-get($colors, txt-white);
+      text-align: center;
+      .img {
+        img {
+          opacity: 0;
+          border-top-left-radius: 25px;
+          border-top-right-radius: 25px;
+        }
+        span {
+          display: block !important;
+        }
+        position: relative;
+        margin: 0px;
+        &.animated {
+         img {
+          animation: FadeUpAnimation 1.3s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+          opacity: 1;
+         }
+        }
       }
-    }
-    .black-button {
-      margin-top: 20px;
-      margin-bottom: 50px;
+
+      .popup {
+        position: absolute;
+        width: 13vw;
+        right: 0%;
+        transform: translateX(50%);
+        top: 25%;
+        opacity: 0;
+
+        &.animated {
+          animation: S6L3FadeUp 1.3s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+          opacity: 1;
+        }
+      }
+      .black-button {
+        margin-top: 20px;
+        margin-bottom: 50px;
+      }
     }
   }
   .line-4 {
@@ -162,16 +179,17 @@
       flex-grow: 1;
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      // gap: 20px;
       .banner-2 {
         flex-shrink: 0;
+        // flex-grow: 1;
         background-color: #354ff6;
         color: white;
         display: flex;
         flex-direction: row;
-        gap: 20px;
+        // gap: 20px;
         height: fit-content;
-        max-height: 45%;
+        // max-height: 45%;
         overflow: hidden;
         position: relative;
         &-left {
@@ -188,6 +206,7 @@
         }
       }
       .banner-3 {
+        flex-grow: 0;
         .img {
           width: 50%;
           overflow: auto;
@@ -233,17 +252,24 @@
   .section-banner {
     .banner-line {
       flex-direction: column;
+      .banner {
+        padding: 8vw;
+        margin-left: 0px;
+        margin-right: 0px;
+        // margin-bottom: 0px;
+      }
     }
 
-    .banner {
-      padding: 8vw !important;
-    }
     .line-1 .banner,
     .line-2 .banner,
     .line-2 .banner,
     .line-4 .banner,
     .line-5 .banner {
       max-width: 100%;
+      // width: 100%;
+    }
+    .line-1 .banner,
+    .line-2 .banner {
       width: 100%;
     }
     .line-4-right .banner-2 .img {

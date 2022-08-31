@@ -16,7 +16,8 @@ article {
   margin-block: 60px;
   .block {
     margin-block: 30px;
-    font-weight: map-get($font-weight, fade );
+    font-weight: map-get($font-weight, normal );
+    font-family: 'Heebo';
     font-size: 17px;
     line-height: 25px;
   }
