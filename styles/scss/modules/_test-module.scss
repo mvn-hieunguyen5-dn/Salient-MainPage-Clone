@@ -1,0 +1,21 @@
+.test-m {
+  &.mouse-position {
+    height: 50px;
+    width: fit-content;
+    padding-inline: 20px;
+    background-color: black;
+    z-index: 2000;
+
+    &.left {
+      content: "<";
+      background-color: red;
+      color: white;
+      font-size: larger;
+    }
+    &.right {
+      content: ">";
+      background-color: green;
+      font-size: larger;
+    }
+  }
+}

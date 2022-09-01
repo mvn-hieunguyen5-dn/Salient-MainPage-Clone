@@ -7,10 +7,10 @@ interface sponsor {
 }
 export default function SponsorSlider() {
   const [spot, setSpot] = useState(0);
-  const devSpeed = 100;
+  const devSpeed = 500;
   const [speed, setSpeed] = useState(devSpeed);
   let first = 20;
-  const [isLoop, setLoop] = useState(true);
+  const [isLoop, setLoop] = useState(false);
   const Sponsors: sponsor[] = [
     {
       id: 1,
@@ -43,13 +43,13 @@ export default function SponsorSlider() {
   ];
   useEffect(() => {
     const AutoSlide = setInterval(function () {
-      if (spot === -140) {
+      if (spot === first * Sponsors.length) {
         // setSpeed(0);
         // setLoop(false);
         setSpot(0);
       } else {
         setSpeed(devSpeed);
-        setSpot(spot - 1);
+        isLoop && setSpot(spot + 1);
       }
     }, speed);
     return () => {
@@ -61,7 +61,7 @@ export default function SponsorSlider() {
       className="flickity-slider"
       style={{
         transitionDuration: `${spot === 0 ? 0 : speed + 20}ms`,
-        transform: `translateX(${spot}vw)`,
+        transform: `translateX(${-spot}vw)`,
       }}
     >
       {Sponsors.map((s) => (
@@ -69,7 +69,7 @@ export default function SponsorSlider() {
           key={s.id}
           className={`logo-container logo-${s.id} `}
           style={{
-            transform: `translateX(${-spot > first * s.id ? 140 : 0}vw)`,
+            transform: `translateX(${spot > first * s.id ? first * Sponsors.length : 0}vw)`,
           }}
         >
           <Image
@@ -77,8 +77,6 @@ export default function SponsorSlider() {
             alt="sponsor"
             height={113}
             width={373}
-            loading="eager"
-
             // layout="fill"
           />{" "}
         </div>

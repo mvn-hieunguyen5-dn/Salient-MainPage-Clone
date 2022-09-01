@@ -24,6 +24,10 @@
     left: 0px;
     transition: cubic-bezier(1, 1, 1, 1);
     .logo-container {
+      *{
+        user-select: none;
+        -webkit-user-drag: none;
+      }
       position: relative;
       padding-inline: 4.5em;
       transition-duration: 0s;
